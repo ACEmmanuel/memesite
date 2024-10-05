@@ -86,6 +86,7 @@ const itemVariants = {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.7 }}
+        variants={containerVariants}
       >
         {/* <h1 className="text-center text-4xl">JOIN US</h1> */}
 

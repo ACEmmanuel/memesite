@@ -18,6 +18,9 @@ const Header = () => {
     }
   }, [isMenuOpen]);
 
+
+
+
   return (
     <>
       <header className="fixed top-0 w-full backdrop-blur-sm z-[888] md:px-5">
@@ -72,14 +75,14 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-[1000] bg-black bg-opacity-70" // Increased z-index to be above everything
+            className="fixed inset-0 z-[1000] bg-black bg-opacity-50" // Increased z-index to be above everything
             onClick={openMenu} // Close the menu when backdrop is clicked
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.2 } }} // Faster exit animation for backdrop
           >
             <motion.div
-              className="fixed top-0 right-0 w-[90%] h-full bg-white p-4 z-[1001] " // High z-index for the menu as well
+              className="fixed top-0 right-0 w-[90%] h-full bg-white/80 p-4 z-[1003] space-y-5 pt-10 font-perm uppercase backdrop-blur-md" // High z-index for the menu as well
               initial={{ x: '100%' }} // Start fully off-screen
               animate={{ x: '30%' }} // Slide in
               exit={{ x: '100%', transition: { duration: 0.3 } }} // Faster exit animation for menu
@@ -90,7 +93,17 @@ const Header = () => {
               <p>about</p>
               <p>tokenomics</p>
               <p>roadmap</p>
-              <p>how to buy</p>
+              <p>
+              <motion.a
+              whileHover={{ scale: 1.1 }}
+              className="text-blue-600 rounded-md cursor-pointer"
+              href="https://youtu.be/L8XbI9aJOXk?si=VIgEHuYMtx-Z19NA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className='uppercase'>buy now</button>
+            </motion.a>
+            </p>
             </motion.div>
           </motion.div>
         )}
