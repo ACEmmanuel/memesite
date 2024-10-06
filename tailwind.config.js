@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'perm': [ "cursive"],
+        'perm': ["Comic Neue", "cursive"],
       },
     },
   },
