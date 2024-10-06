@@ -11,9 +11,9 @@ const Tokenomics = () => {
         transition={{ duration: 0.8, ease: 'easeOut' }} 
         viewport={{ once: true, amount: 0.7 }}
       >
-        <h1 className="text-4xl lg:text-5xl mx-auto">TOKENOMICS</h1>
+        <h1 className="text-4xl lg:text-5xl mx-auto textShadow">TOKENOMICS</h1>
 
-        <div className="max-w-[20rem] sm:max-w-[20rem] text-[18px] md:text-[20px] rounded-md bg-[#D0DEF8] p-7 space-y-3">
+        <div className="max-w-[20rem] sm:max-w-[20rem] text-[18px] md:text-[20px] rounded-md bg-[#D0DEF8] boxShadow p-7 space-y-3">
           <p>100,000,000 Total Supply</p>
           <p>0% Tax</p>
           <p>80% liquidity and LP tokens will be burnt</p>

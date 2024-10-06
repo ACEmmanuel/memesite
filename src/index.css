@@ -4,5 +4,16 @@
 
 
 .textShadow{
-    text-shadow: 4px 4px 0 white;
+    text-shadow: 2px 2px 0 white;
 }
+
+.boxShadow {
+    box-shadow: 6px 7px 0 0 black; /* Horizontal, Vertical, Blur Radius, Spread Radius, Color */
+    border-radius: 10px;
+  }
+
+  .boxShadow:hover{
+    box-shadow: 3px 3px 0 0 white;
+    transition: all 100ms linear;
+    border-radius: 10px;
+  }
