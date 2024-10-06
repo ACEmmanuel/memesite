@@ -84,7 +84,7 @@ const Header = () => {
             <motion.div
               className="fixed top-0 right-0 w-[90%] h-full text-[18px] bg-[#f0eeee] p-4 z-[1003] space-y-7 pt-14 font-bold font-perm uppercase backdrop-blur-md" // High z-index for the menu as well
               initial={{ x: '100%' }} // Start fully off-screen
-              animate={{ x: '10%' }} // Slide in
+              animate={{ x: '25%' }} // Slide in
               exit={{ x: '100%', transition: { duration: 0.3 } }} // Faster exit animation for menu
               transition={{ type: 'spring', stiffness: 200 }}
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the menu

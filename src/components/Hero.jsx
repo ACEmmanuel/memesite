@@ -42,7 +42,7 @@ const itemVariants = {
 
   return (
     <>
-      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2 mt-[6rem] md:mt-[3rem] lg:mt-[2.5rem] w-fit'>
+      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2 mt-[8rem] md:mt-[3rem] lg:mt-[2.5rem] w-fit'>
 
         <div className='mx-auto px-10 relative'>
           <p className='text-[4rem] md:text-[8rem] textShadow '>CATOSHI</p>
