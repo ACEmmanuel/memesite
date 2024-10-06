@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <>
       <header className="fixed top-0 w-full backdrop-blur-sm z-[888] md:px-5">
-        <div className="flex justify-between items-center py-5 px-6 flex-nowrap uppercase font-perm font-normal text-lg text-white">
+        <div className="flex justify-between items-center py-5 px-6 flex-nowrap uppercase font-bold font-perm  text-lg text-white">
           <p className="text-2xl md:text-3xl">$Catoshi</p>
 
           <div className="hidden lg:flex justify-evenly items-center gap-6">
@@ -82,9 +82,9 @@ const Header = () => {
             exit={{ opacity: 0, transition: { duration: 0.2 } }} // Faster exit animation for backdrop
           >
             <motion.div
-              className="fixed top-0 right-0 w-[90%] h-full bg-white/80 p-4 z-[1003] space-y-5 pt-10 font-perm uppercase backdrop-blur-md" // High z-index for the menu as well
+              className="fixed top-0 right-0 w-[90%] h-full text-[18px] bg-[#f0eeee] p-4 z-[1003] space-y-7 pt-14 font-bold font-perm uppercase backdrop-blur-md" // High z-index for the menu as well
               initial={{ x: '100%' }} // Start fully off-screen
-              animate={{ x: '30%' }} // Slide in
+              animate={{ x: '10%' }} // Slide in
               exit={{ x: '100%', transition: { duration: 0.3 } }} // Faster exit animation for menu
               transition={{ type: 'spring', stiffness: 200 }}
               onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the menu

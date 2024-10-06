@@ -22,12 +22,12 @@ const Footer = () => {
   return (
     <>
       <motion.section
-        className="max-auto w-full font-perm mt-[2rem] mb-[7rem]"
+        className="max-auto w-full font-bold font-perm mt-[2rem] mb-[7rem]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.7 }}
       >
-        <h1 className="text-center text-4xl">JOIN US</h1>
+        <h1 className="text-center text-4xl lg:text-5xl">JOIN US</h1>
 
         <motion.div
           className="flex flex-row w-fit gap-8 mx-auto mt-5"
@@ -36,8 +36,9 @@ const Footer = () => {
           {/* Twitter */}
           <motion.div variants={itemVariants}>
             <svg
-              width={'5rem'}
-              height={'5rem'}
+              width={'3rem'}
+              height={'3rem'}
+              className='md:h-[4rem] md:w-[4rem] '
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -48,8 +49,9 @@ const Footer = () => {
           {/* Telegram */}
           <motion.div variants={itemVariants}>
             <svg
-              width={'5rem'}
-              height={'5rem'}
+              width={'3rem'}
+              height={'3rem'}
+              className='md:h-[4rem] md:w-[4rem] '
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"
             >
@@ -60,8 +62,9 @@ const Footer = () => {
           {/* Facebook */}
           <motion.div variants={itemVariants}>
             <svg
-              width={'5rem'}
-              height={'5rem'}
+              width={'3rem'}
+              height={'3rem'}
+              className='md:h-[4rem] md:w-[4rem] '
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >

@@ -42,13 +42,13 @@ const itemVariants = {
 
   return (
     <>
-      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-perm mx-auto px-2 mt-[6rem] md:mt-[3rem] lg:mt-[2.5rem] w-fit'>
+      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2 mt-[6rem] md:mt-[3rem] lg:mt-[2.5rem] w-fit'>
 
         <div className='mx-auto px-10 relative'>
-          <p className='text-[3rem] md:text-[8rem] textShadow '>CATOSHI</p>
+          <p className='text-[4rem] md:text-[8rem] textShadow '>CATOSHI</p>
           {/* Apply bounce animation to the "on SOLANA" text */}
           <motion.p
-            className='text-[1.5rem] md:text-[2rem] absolute right-6 mt-2'
+            className='text-[1.5rem] md:text-[2rem] absolute right-6'
             variants={bounceAnimation}
             initial="initial"
             animate="animate"
@@ -61,7 +61,7 @@ const itemVariants = {
         </div>
 
         <div>
-          <img src='./cat.png' className='size-[20rem] md:size-[28rem] object-cover w-fit ' />
+          <img src='./cat.png' className='size-[16rem] md:size-[28rem] object-cover w-fit ' />
         </div>
         
       </div>
@@ -81,17 +81,19 @@ const itemVariants = {
 
 
       {/* Hero Logos */}
+      {/* bg-[#A8C1E6] */}
+
       <motion.section
-        className="mx-auto rounded-md font-perm bg-[#A8C1E6] px-7 py-4 w-fit"
+        className="mx-auto rounded-md font-perm px-7 w-fit"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.7 }}
         variants={containerVariants}
       >
-        {/* <h1 className="text-center text-4xl">JOIN US</h1> */}
+        
 
         <motion.div
-          className="grid place-content-center grid-cols-3 md:grid-cols-5 gap-8 mx-auto mt-5"
+          className="flex flex-row flex-wrap gap-8 mx-auto mt-5"
           variants={containerVariants}
         >
           {/* Twitter */}
@@ -100,6 +102,7 @@ const itemVariants = {
               
               width={'2.5rem'}
               height={'2.5rem'}
+              className='md:h-[4rem] md:w-[4rem] '
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -113,6 +116,7 @@ const itemVariants = {
               
               width={'2.5rem'}
               height={'2.5rem'}
+              className='md:h-[4rem] md:w-[4rem] '
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"
             >
@@ -126,6 +130,7 @@ const itemVariants = {
               
               width={'2.5rem'}
               height={'2.5rem'}
+              className='md:h-[4rem] md:w-[4rem] '
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -134,17 +139,18 @@ const itemVariants = {
           </motion.div>
 
           {/* Facebook */}
-          <motion.div variants={itemVariants}>
+          {/* <motion.div variants={itemVariants}>
             <svg
               
               width={'2.5rem'}
               height={'2.5rem'}
+              className='md:h-[4rem] md:w-[4rem] '
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
               <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
             </svg>
-          </motion.div>
+          </motion.div> */}
 
            {/* Telegram */}
            <motion.div variants={itemVariants}>
@@ -152,6 +158,7 @@ const itemVariants = {
               
               width={'2.5rem'}
               height={'2.5rem'}
+              className='md:h-[4rem] md:w-[4rem] '
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"
             >
