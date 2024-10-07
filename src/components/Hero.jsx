@@ -44,19 +44,14 @@ const itemVariants = {
     <>
       <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2 mt-[8rem] md:mt-[3rem] lg:mt-[2.5rem] w-fit'>
 
-        <div className='mx-auto px-10 relative'>
-          <p className='text-[4rem] md:text-[8rem] textShadow'>CATOSHI</p>
-          {/* Apply bounce animation to the "on SOLANA" text */}
+        <div className='mx-auto relative'>
+          <p className='text-[3.8rem] md:text-[8rem] textShadow text-center'>CATOSHI</p>
           <motion.span
-            className='text-[1.5rem] md:text-[2rem] absolute right-6'
-            variants={bounceAnimation}
-            initial="initial"
-            animate="animate"
+            className='text-[1.5rem] md:text-[2rem] absolute right-6 color-change'
           >
-            <p className=''>
-            on SOLANA
-            </p>
+            <p>on SOLANA</p>
           </motion.span>
+
           
         
 
@@ -86,7 +81,7 @@ const itemVariants = {
       {/* bg-[#A8C1E6] */}
 
       <motion.section
-        className="mx-auto rounded-md font-perm px-7 w-fit"
+        className="mx-auto rounded-md font-perm w-fit"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.7 }}
@@ -95,7 +90,7 @@ const itemVariants = {
         
 
         <motion.div
-          className="flex flex-row flex-wrap gap-8 mx-auto mt-5"
+          className="flex flex-row flex-wrap gap-5 mx-auto mt-5 w-full"
           variants={containerVariants}
         >
           {/* Twitter */}

@@ -12,6 +12,40 @@
     border-radius: 10px;
   }
 
+  /* Apply the colorChange animation with more subtle transitions */
+.color-change {
+  animation: colorChange 4s infinite;
+}
+
+
+/* Apply the colorChange animation */
+.color-change {
+  animation: colorChange 4s infinite; /* Duration of 4 seconds and infinite repetition */
+}
+
+
+/* Define keyframes for multi-color change with tinted colors */
+@keyframes colorChange {
+  0% {
+    color: rgba(255, 0, 0, 0.7); /* Soft Red */
+  }
+  25% {
+    color: rgba(0, 255, 0, 0.7); /* Soft Green */
+  }
+  50% {
+    color: rgba(0, 0, 255, 0.7); /* Soft Blue */
+  }
+  75% {
+    color: rgba(255, 0, 255, 0.7); /* Soft Magenta */
+  }
+  100% {
+    color: rgba(255, 0, 0, 0.7); /* Soft Red */
+  }
+}
+
+
+
+
   /* .boxShadow:hover{
     box-shadow: 3px 3px 0 0 white;
     transition: all 100ms linear;
