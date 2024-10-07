@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import { motion } from 'framer-motion';
 
 //Import Components & Icon
-import Clipboard from './icons/clipboard'; 
-import Check from './icons/check';
+import Contract from './Contract';
 
 const Hero = () => {
 
@@ -58,22 +57,34 @@ const copyText = () => {
     <>
     <section className='sun-gradient pt-[5rem] md:pt-[3rem] lg:pt-[2.5rem] pb-[3rem]'>
 
-      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2  w-fit'>
+      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2 w-fit'>
+
         <div className='mx-auto relative'>
           <p className='text-[4.5rem] md:text-[8rem] textShadow text-center'>CATOSHI</p>
           <span
-            className='absolute top-[4.8rem] md:top-[8.8rem] right-0 text-[1.5rem] md:text-[2rem] animate-bounce '
-          >
-            on SOLANA
-          </span>
+            className='absolute top-[5rem] md:top-[9rem] right-0 text-[1.5rem] md:text-[2rem] animate-bounce '> on SOLANA </span>
 
-          
-        
-
+          {/* Contract Address */}
+          <Contract contractAddress={contractAddress} copied={copied} copyText={copyText} stylee={'hidden md:flex mt-2 lg:mt-4'} /> 
+      
         </div>
 
         <div>
-          <img src='./cat.png' className='size-[22rem] md:size-[30rem] object-cover w-fit mt-[-1rem] lg:mt-0 ' />
+        <div className="relative w-fit">
+          {/* First Image (Default) */}
+          <img
+            src='./cat.png' 
+            className='size-[22rem] md:size-[30rem] object-cover w-fit mt-[-1rem] lg:mt-0 transition-opacity duration-300 ease-in-out opacity-100 hover:opacity-0' 
+            alt='Cat 1' 
+          />
+
+          {/* Second Image (On Hover) */}
+          <img 
+            src='./cat2.png' 
+            className='size-[22rem] md:size-[30rem] object-cover w-fit mt-[-1rem] lg:mt-0 absolute top-0 left-0 transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100' 
+            alt='Cat 2' 
+          />
+        </div>
         </div>
         
       </div>
@@ -83,16 +94,9 @@ const copyText = () => {
 
 
 
-{/* Contract Address */}
+    {/* Contract Address */}
+    <Contract contractAddress={contractAddress} copied={copied} copyText={copyText} stylee={'flex md:hidden'} />
 
-<div className='w-fit mx-auto flex mb-[2rem] gap-4 font-perm font-bold'>
-
-  <p className='bg-white rounded-sm px-2 mx-auto font-perm lg:text-[18px] max-w-[15rem] md:max-w-[20rem] lg:max-w-[full] truncate '>{contractAddress}</p>
-
-    <button onClick={copyText} className=' transition-all duration-1000 ease-in-out '>
-      {copied ? <Check  /> : <Clipboard /> }
-    </button>
-</div>
 
 
 
