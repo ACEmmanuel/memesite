@@ -27,7 +27,7 @@ const Footer = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.7 }}
       >
-        <h1 className="text-center text-4xl lg:text-5xl textShadow">JOIN US</h1>
+        <h1 className="text-center text-4xl lg:text-5xl underline">JOIN US</h1>
 
         <motion.div
           className="flex flex-row w-fit gap-8 mx-auto mt-5"
