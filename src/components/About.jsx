@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
 
-        <motion.section className='flex flex-col gap-5 p-6 mt-[5rem] mx-auto w-fit font-perm font-bold '
+        <motion.section className='flex flex-col gap-5 p-6 mt-[5rem] mx-auto w-fit font-perm font-bold'
         initial={{ opacity: 0, y: 50 }} 
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.8, ease: 'easeOut' }} 

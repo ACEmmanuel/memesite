@@ -10,6 +10,8 @@ import About from './components/About'
 import Tokenomics from './components/Tokenomics'
 import Footer from './components/Footer'
 
+import HowToBuy from './components/HowToBuy'
+
 function App() {
 
 
@@ -22,6 +24,8 @@ function App() {
       <Tokenomics />
       <Footer />
 
+
+      {/* <HowToBuy /> */}
     </>
   )
 }

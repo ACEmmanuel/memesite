@@ -12,8 +12,8 @@
     border-radius: 10px;
   }
 
-  .boxShadow:hover{
+  /* .boxShadow:hover{
     box-shadow: 3px 3px 0 0 white;
     transition: all 100ms linear;
     border-radius: 10px;
-  }
+  } */
