@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDown, setIsDown] = useState(false)
 
   // Function to handle menu open/close
   const openMenu = () => {
@@ -18,12 +19,34 @@ const Header = () => {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if(window.scrollY){
+        if (window.scrollY >= 605 ){
+          setIsDown(true)
+        }
+        if (window.scrollY < 605 ){
+          setIsDown(false)
+        }
+      }
+    }; 
+
+    // Add the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  }, [])
+
 
 
 
   return (
     <>
-      <header className="fixed top-0 w-full backdrop-blur-sm z-[888] md:px-5">
+      <header className={`fixed top-0 w-full backdrop-blur-sm z-[888] md:px-5 ${isDown ? 'bg-[#2AA5FD]' : '' }`}>
         <div className="flex justify-between items-center py-5 px-6 flex-nowrap uppercase font-bold font-perm  text-lg text-white">
           <p className="text-2xl md:text-3xl">$Catoshi</p>
 
@@ -70,7 +93,7 @@ const Header = () => {
       </header>
 
 
-
+    
       {/* Backdrop and Sliding Menu for Mobile */}
       <AnimatePresence>
         {isMenuOpen && (

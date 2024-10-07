@@ -1,12 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+//Import Components
+import Background from './Background'
+
 const About = () => {
 
 
   return (
     <>
-        {/* <div className=' w-full bg-white pb-5'> */}
+
+
         <motion.section className='flex flex-col gap-5 p-6 mt-[5rem] mx-auto w-fit font-perm font-bold'
         initial={{ opacity: 0, y: 50 }} 
         whileInView={{ opacity: 1, y: 0 }} 
@@ -24,7 +28,6 @@ const About = () => {
                 
             </div>
         </motion.section>
-        {/* </div> */}
     </>
   )
 }

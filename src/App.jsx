@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Test from './Test'
+
 import './App.css'
 
 // Components
@@ -11,6 +11,7 @@ import Tokenomics from './components/Tokenomics'
 import Footer from './components/Footer'
 
 import HowToBuy from './components/HowToBuy'
+import Background from './components/Background'
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
       <Tokenomics />
       <Footer />
 
-
+       {/* <Background /> */}
       {/* <HowToBuy /> */}
     </>
   )
