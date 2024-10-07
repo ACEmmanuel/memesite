@@ -42,15 +42,15 @@ const itemVariants = {
 
   return (
     <>
-      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2 mt-[8rem] md:mt-[3rem] lg:mt-[2.5rem] w-fit'>
+      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2 mt-[6rem] md:mt-[3rem] lg:mt-[2.5rem] w-fit'>
 
         <div className='mx-auto relative'>
           <p className='text-[3.8rem] md:text-[8rem] textShadow text-center'>CATOSHI</p>
-          <motion.span
-            className='text-[1.5rem] md:text-[2rem] absolute right-6 color-change'
+          <span
+            className='absolute top-[3.8rem] md:top-[8.5rem] right-0 text-[1.5rem] md:text-[2rem] color-change'
           >
-            <p>on SOLANA</p>
-          </motion.span>
+            on SOLANA
+          </span>
 
           
         
@@ -58,7 +58,7 @@ const itemVariants = {
         </div>
 
         <div>
-          <img src='./cat.png' className='size-[16rem] md:size-[28rem] object-cover w-fit ' />
+          <img src='./cat.png' className='size-[22rem] md:size-[30rem] object-cover w-fit mt-[-1rem] lg:mt-0 ' />
         </div>
         
       </div>
@@ -69,9 +69,12 @@ const itemVariants = {
 
 
 
+{/* 
+<div className='w-full'>
 
+  <p className='bg-white px-6 w-fit p-2 rounded-md mx-auto font-perm lg:text-[1.5rem] '>6WNva7iLjTvxSfXPSmbjceW5Yc41LUH4SJNqKom5pump</p>
 
-
+</div> */}
 
 
 
