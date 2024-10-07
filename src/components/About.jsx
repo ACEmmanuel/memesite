@@ -6,7 +6,7 @@ const About = () => {
 
   return (
     <>
-
+        {/* <div className=' w-full bg-white pb-5'> */}
         <motion.section className='flex flex-col gap-5 p-6 mt-[5rem] mx-auto w-fit font-perm font-bold'
         initial={{ opacity: 0, y: 50 }} 
         whileInView={{ opacity: 1, y: 0 }} 
@@ -14,7 +14,7 @@ const About = () => {
         viewport={{ once: true, amount: 0.2 }}
         >
 
-            <h1 className='text-4xl lg:text-5xl mx-auto textShadow'>ABOUT</h1>
+            <h1 className='text-4xl lg:text-5xl mx-auto textShadowBlue'>ABOUT</h1>
             
             <div className='flex flex-col md:flex-row gap-3 boxShadow'>
                 <div className='max-w-[20rem] sm:max-w-[35rem] text-[18px] md:text-[20px] rounded-md bg-[#D0DEF8] p-5'>
@@ -24,7 +24,7 @@ const About = () => {
                 
             </div>
         </motion.section>
-
+        {/* </div> */}
     </>
   )
 }

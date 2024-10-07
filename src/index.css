@@ -7,10 +7,19 @@
     text-shadow: 2px 2px 0 white;
 }
 
+.textShadowBlue{
+  text-shadow: 2px 2px 0 #24BAFF;
+}
+
 .boxShadow {
     box-shadow: 6px 7px 0 0 black; /* Horizontal, Vertical, Blur Radius, Spread Radius, Color */
     border-radius: 10px;
   }
+
+  .sun-gradient {
+    background: radial-gradient(circle at top center, #24BAFF 10%, #3479F8 90%);
+  }
+  
 
   /* Apply the colorChange animation with more subtle transitions */
 .color-change {

@@ -38,7 +38,8 @@ const Footer = () => {
             <svg
               width={'3rem'}
               height={'3rem'}
-              className='md:h-[4rem] md:w-[4rem] bg-white size-full p-2 rounded-md'
+              fill="white"
+              className='md:h-[4rem] md:w-[4rem] bg-[#3479F8] size-full p-3 rounded-md'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -51,7 +52,8 @@ const Footer = () => {
             <svg
               width={'3rem'}
               height={'3rem'}
-              className='md:h-[4rem] md:w-[4rem] bg-white size-full p-2 rounded-md'
+              fill="white"
+              className='md:h-[4rem] md:w-[4rem] bg-[#3479F8] size-full p-3 rounded-md'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 496 512"
             >
@@ -64,7 +66,8 @@ const Footer = () => {
             <svg
               width={'3rem'}
               height={'3rem'}
-              className='md:h-[4rem] md:w-[4rem] bg-white size-full p-2 rounded-md'
+              fill="white"
+              className='md:h-[4rem] md:w-[4rem] bg-[#3479F8] size-full p-3 rounded-md'
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >

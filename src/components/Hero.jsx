@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { motion } from 'framer-motion';
 
+//Import Components & Icon
+import Clipboard from './icons/clipboard'; 
+import Check from './icons/check';
+
 const Hero = () => {
+
+  const [copied, setCopied] = useState(false);
+  const contractAddress = '6WNva7iLjTvxSfXPSmbjceW5Yc41LUH4SJNqKom5pump';
+
   // Define the bounce animation
   const bounceAnimation = {
     // Set the initial state of the element
@@ -35,6 +43,12 @@ const itemVariants = {
 };
 
 
+const copyText = () => {
+  navigator.clipboard.writeText(contractAddress).then(() => {
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000); // Reset the copied state after 2 seconds
+  });
+}
 
 
 
@@ -42,12 +56,13 @@ const itemVariants = {
 
   return (
     <>
-      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2 mt-[6rem] md:mt-[3rem] lg:mt-[2.5rem] w-fit'>
+    <section className='sun-gradient pt-[5rem] md:pt-[3rem] lg:pt-[2.5rem] pb-[3rem]'>
 
+      <div className='flex justify-center items-center flex-col lg:flex-row flex-nowrap font-bold font-perm mx-auto px-2  w-fit'>
         <div className='mx-auto relative'>
-          <p className='text-[3.8rem] md:text-[8rem] textShadow text-center'>CATOSHI</p>
+          <p className='text-[4.5rem] md:text-[8rem] textShadow text-center'>CATOSHI</p>
           <span
-            className='absolute top-[3.8rem] md:top-[8.5rem] right-0 text-[1.5rem] md:text-[2rem] color-change'
+            className='absolute top-[4.8rem] md:top-[8.8rem] right-0 text-[1.5rem] md:text-[2rem] animate-bounce '
           >
             on SOLANA
           </span>
@@ -68,13 +83,16 @@ const itemVariants = {
 
 
 
+{/* Contract Address */}
 
-{/* 
-<div className='w-full'>
+<div className='w-fit mx-auto flex mb-[2rem] gap-4 font-perm font-bold'>
 
-  <p className='bg-white px-6 w-fit p-2 rounded-md mx-auto font-perm lg:text-[1.5rem] '>6WNva7iLjTvxSfXPSmbjceW5Yc41LUH4SJNqKom5pump</p>
+  <p className='bg-white rounded-sm px-2 mx-auto font-perm lg:text-[18px] max-w-[15rem] md:max-w-[20rem] lg:max-w-[full] truncate '>{contractAddress}</p>
 
-</div> */}
+    <button onClick={copyText} className=' transition-all duration-1000 ease-in-out '>
+      {copied ? <Check  /> : <Clipboard /> }
+    </button>
+</div>
 
 
 
@@ -154,6 +172,7 @@ const itemVariants = {
 
         </motion.div>
       </motion.section>
+    </section>
 
       {/* <p className='bg-white px-2 w-fit p-4 rounded-full mx-auto font-perm lg:text-[1.5rem] '>6WNva7iLjTvxSfXPSmbjceW5Yc41LUH4SJNqKom5pump</p> */}
 
