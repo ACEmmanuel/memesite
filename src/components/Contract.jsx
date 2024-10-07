@@ -1,8 +1,8 @@
 import React from 'react';
 
 //Import Components & Icon
-import Clipboard from './icons/clipboard'; 
-import Check from './icons/check';
+import Clipboard from './icons/clipboard.jsx'; 
+import Check from './icons/check.jsx';
 
 const Contract = ({copyText, contractAddress, copied, stylee}) => {
   return (
