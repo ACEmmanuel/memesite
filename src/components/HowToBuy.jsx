@@ -1,30 +1,63 @@
-import React from 'react'
+import React from 'react';
+import { motion } from 'framer-motion';
+
+import Card from './Card';
+import content from './content'; // Ensure content is an array of objects with unique IDs
+
+// Define animation variants for staggered children
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, // Time between each child's animation
+      delayChildren: 0.3,   // Delay before the first child starts
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+};
 
 const HowToBuy = () => {
   return (
     <>
 
-      <section className='w-[300px] h-[300px] bg-cover bg-center relative' style={{ backgroundImage: `url('./paper2.png')` }}>
-        
-        <div className='absolute top-[2.3rem] left-[3rem]'>
-          1. Agility of the Market:  
-            The Cat of Satoshi navigates the unpredictable waves of the crypto market with the precision of a skilled samurai. It provides insights and timely alerts, empowering holders to make informed decisions rather than impulsive buys.
 
-          2. Strength in Patience:  
-            Inspired by samurai tradition, this token emphasizes that true strength lies in patience. The Cat reminds its followers that the best way to secure a future filled with luxury isn’t through panic-selling or quick flips, but by holding strong and believing in their investment.
+    <motion.h1
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.3 }}
+    variants={containerVariants}
+    className="text-center text-4xl lg:text-5xl underline w-fit mx-auto font-perm font-bold mt-[5rem]">
+      JOIN US
+      </motion.h1>
+      
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={containerVariants}
+      className=' font-perm font-bold'
+    >
 
-          3. Resilience Against Temptation:  
-            The Cat of Satoshi embodies the resilience needed to resist the allure of instant gratification. Instead of breaking your portfolio for that shiny new toy, this cat shows that loyalty to one’s investments leads to greater rewards—both in financial gain and in peace of mind.
-
-          4. Promise of Financial Freedom:  
-            With the Cat of Satoshi at your side, every believer is promised a journey toward true financial freedom. As the community grows, holders unlock exclusive rewards: luxury experiences, NFT drops, and a chance to turn those dream cars into reality—without ever compromising their investments.
-        </div>
-
-      </section>
-
-
+      <div className='flex flex-col lg:flex-row flex-wrap w-fit mx-auto mt-5 font-perm font-bold'>
+      {
+        content.map((item) => {
+          const { id, text } = item;
+          return ( 
+            <motion.div key={id} variants={itemVariants}>
+              <Card text={text} num={id}/>
+            </motion.div>
+          );
+        })
+      }
+      </div>
+    </motion.section>
     </>
-  )
+  );
 }
 
-export default HowToBuy
+export default HowToBuy;

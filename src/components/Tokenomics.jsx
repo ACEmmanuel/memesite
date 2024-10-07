@@ -9,9 +9,9 @@ const Tokenomics = () => {
         initial={{ opacity: 0, y: 50 }} 
         whileInView={{ opacity: 1, y: 0 }} 
         transition={{ duration: 0.8, ease: 'easeOut' }} 
-        viewport={{ once: true, amount: 0.7 }}
+        viewport={{ once: true, amount: 0.4 }}
       >
-        <h1 className="text-4xl lg:text-5xl mx-auto underline">TOKENOMICS</h1>
+        <h1 className="text-4xl lg:text-5xl mx-auto underline mb-5">TOKENOMICS</h1>
 
         <div className='flex flex-col md:flex-row gap-5 '>
 
